@@ -3,6 +3,8 @@
 
 Sometime your machine is inside a firewall. You want to access this machine from outside the firewall.
 You can use this image to achieve this goal.
+** NOTICE **
+mac is not supported.
 
 ## how to use
 
