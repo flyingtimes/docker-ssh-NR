@@ -1,0 +1,14 @@
+version: '2'
+services:
+  service_proxy:
+    image: 'clarkchan/alpine-ssh'
+    environment:
+      - SERVICE_PORT=7777
+      - REMOTE_HOST=13.250.127.18
+      - REMOTE_PORT=44501
+      - REMOTE_USER=ubuntu
+      - PEM_FILE=vpn.pem
+    network_mode: "host"
+    restart: always
+    volumes:
+      - .:/app
