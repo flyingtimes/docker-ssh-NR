@@ -3,11 +3,11 @@ services:
   service_proxy:
     image: 'clarkchan/alpine-ssh'
     environment:
-      - SERVICE_PORT=7777
-      - REMOTE_HOST=13.250.127.18
-      - REMOTE_PORT=44501
-      - REMOTE_USER=ubuntu
-      - PEM_FILE=vpn.pem
+      - SERVICE_PORT=8080		#your service port in your local machine
+      - REMOTE_HOST=1.2.3.4		#your jumper machine's ip or url can be access from anywhere
+      - REMOTE_PORT=10080              #your jumper machine's port can be access from anywhere
+      - REMOTE_USER=ubuntu              #your jumper machine's user name
+      - PEM_FILE=key.pem                #your jumper machine's key file.usually xxx.pem, place it in the current directory
     network_mode: "host"
     restart: always
     volumes:
